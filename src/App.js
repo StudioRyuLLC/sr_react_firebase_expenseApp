@@ -14,7 +14,7 @@ import {ExpenseTracker} from './pages/expense_tracker/index';
 //import {useGetUserInfo} from './hooks/useGetUserInfo';
 
 //get 404
-//import {NotFound} from './pages/not_found';
+import {NotFound} from './pages/not_found';
 
 //get top navigational component
 //import {TopNav} from './layouts/top_nav';
@@ -45,6 +45,7 @@ function App() {
 
           <Routes>
           
+            <Route exact path='*' element={<NotFound />} />
             <Route exact path="/" element={<Auth />} />
             <Route exact path="/expense_tracker" element={<ExpenseTracker />} />
 
