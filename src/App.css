@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+
+
+body{
+    color:rgb(107, 105, 105);
+    height:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    color:rgb(223, 8, 8);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a, 
+a:visited, 
+a:focus{
+    color: rgb(173, 4, 4);
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:hover{
+
+    cursor:pointer;
+    text-decoration: none;
+
 }
 
-.App-link {
-  color: #61dafb;
+.nav_top{
+    background-color:red!important;
+    box-shadow: 0px 2px 2px #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav_top .profile_img{
+
+    position:absolute;
+    left:15px;
+    top:10px;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar-brand.loggedin{
+
+    padding-left:100px;
+
+}
+
+.login_wrapper{
+    margin-top:auto;
+    vertical-align: middle;
+}
+
+.login_wrapper{
+
+    margin-top: 12rem;
+}
+
+.expense_tracker_wrapper{
+
+    margin-top: 5.5rem;
+}
+
+.btn-primary, 
+.btn-primary:focus, 
+.btn-primary:visited, 
+.btn-primary:not(:disabled):not(.disabled):active{
+    background-color:rgb(223, 8, 8)!important;
+    border-color:rgb(223, 8, 8)!important;
+   
+}
+
+.btn-primary:hover{
+
+    background-color:red!important;
+}
+
+.btn-default:active:focus{
+    background-color:rgb(173, 4, 4)!important;
+    border-color:rgb(173, 4, 4)!important;
+}
+
+.btn-primary:focus{
+
+    box-shadow: 0 0 0 0.2rem rgba(38,143,255,0)!important;
+}
+
+.table.summary_table th,
+.table.transaction_table th{
+
+    color:rgb(107, 105, 105);
+    border-top:0px;
+}
+
+.transactions{
+    position:relative;
+}
+
+.transactions_wrapper{
+
+    overflow-y: scroll;
+    max-height: 250px;
+
+}
+
+.transaction_title{
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 0px;
+}
+
+.table-striped.summary_table tbody tr:nth-of-type(odd) {
+    background-color: #999;
+    color:white;
+}
+
+.transaction_spinner{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+}
+
+
+.nav_bttm{
+    background-color:red!important;
+    color:white;
+    box-shadow: 0px -.5px 0px 1.5px #333;
+}
+
+.signout_link_wrapper{
+
+    position: absolute;
+    right: 10px;
+    top: 70px;
+}
+
+.faux_link{
+    color: rgb(173, 4, 4);
+    text-decoration: underline;
+}
+
+.faux_link:hover{
+
+    cursor:pointer;
+    text-decoration: none;
+
+}
+
+.faux_link.sm{font-size: .75em;}
+
+.signout_wrapper{
+    color:white;
+    padding-top:5px;
+}
+
+.form-group .req_aster{
+
+    font-size: 24px;
+    color: red;
+    padding-bottom: 0px;
+    display: block;
+    margin-bottom: -10px;
+    font-weight:bold;
+}
+
+footer .poweredby_text{
+    display:block;
+    font-size:.75rem;
+}
+
+footer .poweredby_wrapper {
+
+    float: right;
+    width: fit-content;
+
+}
+
+footer .poweredby_item{margin-bottom: 5px;}
+
+footer .poweredby_item .icon{width:18px;}
+
+.copyright_text{
+
+    width: fit-content;
+    float: left;
+}
+
+.copyright_text span{
+    display: block;
+    padding-top: 10px;
+}
+
+img.icon.react{width:22px;}
+
+img.icon.firebase{width:16px;}
+
+/*
+.faux_link_text{
+
+}
+
+.fau_link .fa-sign-out{
+
+}*/
+
+@media only screen and (max-width: 360px){
+
+    .nav_top .profile_img{
+        width: 70px;
+        left: 8px;
+    }
+
+    .navbar-brand{
+        font-size: 1rem;
+    }
+
+    .navbar-brand.loggedin{
+        padding-left: 70px;
+    }
+
+    .navbar_title_name_wrapper{
+        display:none;
+    }
+
+    .signout_wrapper{
+        margin-bottom:0px;
+    }
+    
+    .faux_link_text{
+        display:none;
+    }
+
+    .faux_link_text i{
+        font-size: 24px;
+        line-height: 0px;
+    }
+    
 }
