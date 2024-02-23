@@ -192,7 +192,7 @@ export const ExpenseTracker = () => {
 
             <div className="transactions">
 
-            <h4 className='text-center pb-2 transaction_title'>Transactions</h4>
+                <h4 className='text-center pb-2 transaction_title'>Transactions</h4>
 
                 <div className="transactions_wrapper">
 
@@ -227,7 +227,7 @@ export const ExpenseTracker = () => {
 
                 </div>
 
-                {!transactions && 
+                {transactions === "" && 
                     <i class='fas fa-spinner fa-5x  fa-pulse transaction_spinner'></i>
                 }
 

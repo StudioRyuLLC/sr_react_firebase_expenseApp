@@ -10,9 +10,17 @@ import {db} from '../config/firebase_config';
 //get user info
 import {useGetUserInfo} from './useGetUserInfo';
 
+//get spinner
+//import {Spinner} from '../spinner';
+
 //---------------------------------------
 
 export const useGetTransactions = () => {
+
+    //---
+
+    //display spinner if content is loading...
+    const [loading, setLoading] = useState(true);
 
     //---
 
@@ -41,6 +49,12 @@ export const useGetTransactions = () => {
     const {userId} = useGetUserInfo()
 
     //---
+
+    // const showSpinner = () =>{
+
+    //     return <Spinner /> 
+
+    // }
 
     //function listener for new transactions
     const getTransactions = async () =>{
@@ -116,6 +130,8 @@ export const useGetTransactions = () => {
 
             });
 
+           setLoading(false);
+
         } catch(err){
 
             //error out so doesn't break code
@@ -133,7 +149,9 @@ export const useGetTransactions = () => {
     //hook
     useEffect(() => {
 
-        getTransactions();
+            getTransactions();
+            
+        console.log(loading);
 
     });
 
